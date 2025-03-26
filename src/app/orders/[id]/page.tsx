@@ -175,7 +175,7 @@ export default function OrderDetailsPage({ params }: { params: { id: string } })
                           </p>
                         </div>
                         <p className="font-medium">
-                          ${(item.price * item.quantity).toFixed(2)}
+                        ₹{(item.price * item.quantity).toFixed(2)}
                         </p>
                       </div>
                     ))}
@@ -187,15 +187,15 @@ export default function OrderDetailsPage({ params }: { params: { id: string } })
                 <div className="space-y-2">
                   <div className="flex justify-between">
                     <span>Subtotal</span>
-                    <span>${order.subtotal.toFixed(2)}</span>
+                    <span>₹{order.subtotal.toFixed(2)}</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Tax</span>
-                    <span>${order.tax.toFixed(2)}</span>
+                    <span>₹{order.tax.toFixed(2)}</span>
                   </div>
                   <div className="flex justify-between font-bold text-lg">
                     <span>Total</span>
-                    <span>${order.total.toFixed(2)}</span>
+                    <span>₹{order.total.toFixed(2)}</span>
                   </div>
                 </div>
               </div>

@@ -26,7 +26,10 @@ export default function RootLayout({
           <CartProvider>
             <div className="min-h-screen flex flex-col">
               <Navbar />
-              <main className="flex-grow container mx-auto px-4 py-8">
+              <br/>
+              <br/>
+              <br/>
+              <main className="flex-grow container mx-auto">
                 {children}
               </main>
               <Footer />

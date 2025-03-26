@@ -150,7 +150,7 @@ export default function OrdersPage() {
                               </p>
                             </div>
                             <p className="font-medium">
-                              ${(item.price * item.quantity).toFixed(2)}
+                            ₹{(item.price * item.quantity).toFixed(2)}
                             </p>
                           </div>
                         ))}
@@ -159,15 +159,15 @@ export default function OrdersPage() {
                       <div className="mt-6 pt-6 border-t">
                         <div className="flex justify-between text-sm">
                           <span>Subtotal</span>
-                          <span>${order.subtotal.toFixed(2)}</span>
+                          <span>₹{order.subtotal.toFixed(2)}</span>
                         </div>
                         <div className="flex justify-between text-sm">
                           <span>Tax</span>
-                          <span>${order.tax.toFixed(2)}</span>
+                          <span>₹{order.tax.toFixed(2)}</span>
                         </div>
                         <div className="flex justify-between font-semibold mt-2">
                           <span>Total</span>
-                          <span>${order.total.toFixed(2)}</span>
+                          <span>₹{order.total.toFixed(2)}</span>
                         </div>
                       </div>
                     </div>

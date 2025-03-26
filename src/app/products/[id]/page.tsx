@@ -69,7 +69,7 @@ export default function ProductDetailsPage({ params }: { params: { id: string } 
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-2 py-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="relative h-[400px] md:h-[600px]">
           <Image
@@ -100,7 +100,7 @@ export default function ProductDetailsPage({ params }: { params: { id: string } 
             {product.description}
           </p>
           
-          <div className="flex items-center gap-4 mb-6">
+          <div className="flex sm:flex-row flex-col items-center gap-4 mb-6">
             <div className="flex items-center border rounded-lg">
               <button
                 onClick={() => setQuantity(Math.max(1, quantity - 1))}
@@ -134,10 +134,10 @@ export default function ProductDetailsPage({ params }: { params: { id: string } 
                     className="w-5 h-5 border-2 border-white border-t-transparent rounded-full"
                   />
                 ) : (
-                  <>
+                  <p className=' flex items-center gap-2  text-sm'>
                     <FaShoppingCart />
                     Add to Cart
-                  </>
+                  </p>
                 )}
               </motion.button>
 
