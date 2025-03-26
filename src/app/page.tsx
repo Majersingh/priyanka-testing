@@ -150,7 +150,7 @@ export default function Home() {
   const featuredProducts = products.slice(0, 4);
 
   return (
-    <div className="space-y-16">
+    <div>
       {/* Hero Section */}
       <section className="relative h-[500px] flex items-center justify-center">
         <div className="absolute inset-0 bg-black/50 z-10" />
@@ -174,8 +174,8 @@ export default function Home() {
       </section>
 
       {/* Featured Categories */}
-      <section ref={categoryRef}>
-        <h2 className="text-3xl font-bold mb-8">Featured Categories</h2>
+      <section ref={categoryRef} className='p-4'>
+        <h2 className="text-3xl font-bold my-8 text-center">Featured Categories</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {categories.map((category, index) => (
             <motion.div
@@ -231,8 +231,8 @@ export default function Home() {
       </section>
 
       {/* Featured Products */}
-      <section ref={productRef}>
-        <h2 className="text-3xl font-bold mb-8">Featured Products</h2>
+      <section ref={productRef} className='p-4'>
+        <h2 className="text-3xl font-bold mb-8 text-center">Featured Products</h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {featuredProducts.map((product, index) => {
             const isInCart = items.some(item => item.id === product.id);
